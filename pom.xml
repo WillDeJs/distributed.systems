@@ -8,8 +8,33 @@
     <modules>
         <module>leader</module>
         <module>watcher</module>
+        <module>httpserver</module>
+        <module>httpclient</module>
+        <module>tf-idf</module>
+        <module>distributed-search-worker-node</module>
     </modules>
+    <dependencies>
+        <dependency>
+            <groupId>org.apache.zookeeper</groupId>
+            <artifactId>zookeeper</artifactId>
+            <version>3.9.1</version>
+            <type>jar</type>
+        </dependency>
+        <dependency>
+            <groupId>com.github.squirrelgrip</groupId>
+            <artifactId>kotlin-extensions-protobuf</artifactId>
+            <version>1.5.5</version>
+            <type>jar</type>
+        </dependency>
+        <dependency>
+            <groupId>com.google.protobuf</groupId>
+            <artifactId>protobuf-java</artifactId>
+            <version>4.35.0</version>
+            <type>jar</type>
+        </dependency>
+    </dependencies>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <maven.compiler.release>17</maven.compiler.release>
     </properties>
 </project>

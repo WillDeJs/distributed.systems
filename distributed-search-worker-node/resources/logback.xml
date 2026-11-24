@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/XML/XMLDocument.xml to edit this template
+-->
+<configuration>
+  <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+    <encoder>
+      <pattern>%d{HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n</pattern>
+    </encoder>
+  </appender>
+
+  <!-- Silence noisy ZooKeeper client pings and connection chatter -->
+  <logger name="org.apache.zookeeper" level="WARN" />
+
+  <!-- Keep your own custom traces active -->
+  <logger name="Application" level="TRACE" />
+
+  <!-- Set everything else to WARN or OFF -->
+  <root level="WARN">
+    <appender-ref ref="STDOUT" />
+  </root>
+</configuration>
